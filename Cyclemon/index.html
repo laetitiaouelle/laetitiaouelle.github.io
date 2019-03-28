@@ -1,0 +1,64 @@
+<! DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="refresh" content="10;URL=page.html">
+    </head>
+    
+    <style>
+        body{
+            background: #e2e0e0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .load{
+            position: relative;
+            top: 30%;
+            width: 20%;
+            margin: 0 auto;
+        }
+        .gif{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .gif img{
+            width: inherit;
+            margin: 0;
+            padding: 0;
+        }
+        .logo img{
+            position: fixed;
+            top: 39.5%;
+            left: 46%;
+            opacity: 0.2;
+        }
+        .active img{
+            opacity: 1;
+        }
+    </style>
+    <body>
+        <div class="load">
+            <div class="gif">
+               <img src="images/load.gif">
+            </div>
+            <div id="logo" class="logo">
+                <img src="images/clog.png">
+            </div>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+    </script>
+    <script>
+    $(document).ready(function(){
+       function Classadd(){
+            $('#logo').addClass('active');
+           function rmclass(){
+            $('#logo').removeClass('active');
+       }
+           setTimeout(rmclass,500)
+        }
+        setInterval(Classadd,1000);
+
+      });  
+   
+    </script>
+</html>
